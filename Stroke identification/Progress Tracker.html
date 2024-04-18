@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leg Exercise Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #007bff;
+        }
+
+        .exercise {
+            margin-bottom: 30px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Leg Exercise Images</h1>
+
+    <!-- Container to hold leg exercise images and descriptions -->
+    <div id="exerciseContainer"></div>
+
+    <script>
+        // Leg exercise data containing names, descriptions, and image paths
+        const legExercises = [
+            {
+                name: "Ski Squats & Wall Sits",
+                description: "Perform ski squats and wall sits to strengthen your legs and improve endurance.",
+                imagePath: "C:/Users/subis/Downloads/Stroke identification/Stroke identification/Ski squats wall sits.jpeg"
+            },
+            {
+                name: "Bridging",
+                description: "Bridging exercise helps strengthen the buttocks, lower back, and hamstrings.",
+                imagePath: "C:/Users/subis/Downloads/Stroke identification/Stroke identification/Bridging.jpeg"
+            },
+            {
+                name: "Assisted Reverse Leg Swings",
+                description: "Hold onto a support and swing your leg backward to improve balance and leg strength.",
+                imagePath: "C:/Users/subis/Downloads/Stroke identification/Stroke identification/Assisted Reverse Leg Swings.jpeg"
+            },
+            {
+                name: "Assisted Lateral Leg Swings",
+                description: "Hold onto a support and swing your leg sideways to improve hip mobility and leg strength.",
+                imagePath: "C:/Users/subis/Downloads/Stroke identification/Stroke identification/Assisted Lateral Leg Swings.jpeg"
+            },
+            {
+                name: "Assisted Knee Raises",
+                description: "Hold onto a support and raise your knee towards your chest to improve balance and leg strength.",
+                imagePath: "C:/Users/subis/Downloads/Stroke identification/Stroke identification/Assisted Knee Raises.jpeg"
+            }
+        ];
+
+        // Function to attach leg exercise images and descriptions to the DOM
+        function attachLegExerciseImages() {
+            const container = document.getElementById("exerciseContainer");
+
+            // Loop through each leg exercise
+            legExercises.forEach(exercise => {
+                // Create elements for leg exercise display
+                const exerciseDiv = document.createElement("div");
+                exerciseDiv.classList.add("exercise");
+
+                const exerciseName = document.createElement("h2");
+                exerciseName.textContent = exercise.name;
+
+                const exerciseImg = document.createElement("img");
+                exerciseImg.src = exercise.imagePath;
+                exerciseImg.alt = exercise.name;
+
+                const exerciseDesc = document.createElement("p");
+                exerciseDesc.textContent = exercise.description;
+
+                // Append leg exercise elements to the container
+                exerciseDiv.appendChild(exerciseName);
+                exerciseDiv.appendChild(exerciseImg);
+                exerciseDiv.appendChild(exerciseDesc);
+                container.appendChild(exerciseDiv);
+            });
+        }
+
+        // Call the function to attach leg exercise images and descriptions when the page loads
+        window.addEventListener("load", attachLegExerciseImages);
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Tracker Button</title>
+</head>
+<body>
+    <h1>Click the button to go to the Progress Tracker</h1>
+
+    <!-- Progress Tracker Button -->
+    <button id="progressTrackerButton">Progress Tracker</button>
+
+    <script>
+        // Function to redirect to the Progress Tracker page
+        function redirectToProgressTracker() {
+            // Specify the URL of the Progress Tracker page
+            const progressTrackerUrl = "file:///C:/Users/subis/Downloads/Stroke%20identification/Stroke%20identification/Progress%20Tracker%20-%20Copy.html";
+
+            // Redirect the user to the Progress Tracker page
+            window.location.href = progressTrackerUrl;
+        }
+
+        // Attach click event listener to the Progress Tracker button
+        const progressTrackerButton = document.getElementById("progressTrackerButton");
+        progressTrackerButton.addEventListener("click", redirectToProgressTracker);
+    </script>
+</body>
+</html>
